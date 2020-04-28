@@ -1,2 +1,2 @@
 # Springboot-Elasticsearch
-基于SpringBoot的权限管理系统
+基于SpringBoot的Elasticsearch管理系统
