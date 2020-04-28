@@ -1,0 +1,40 @@
+# 项目信息
+project:
+  # 项目名称
+  name: Springboot-Elasticsearch
+  # 作者
+  author: BiLbo BaGGins
+  year: 2020
+# 服务器配置
+server:
+  port: 80
+  servlet:
+    # 应用的访问路径
+    context-path: /
+    tomcat:
+      # tomcat的URI编码
+      uri-encoding: UTF-8
+      # tomcat最大线程数，默认为200
+      max-threads: 2000
+      # Tomcat启动初始化的线程数，默认值25
+      min-spare-threads: 100
+# Spring配置
+spring:
+  # 模板引擎
+  thymeleaf:
+    mode: HTML
+    encoding: utf-8
+    # 禁用缓存
+    cache: false
+  # 服务模块
+  devtools:
+    restart:
+      # 热部署开关
+      enabled: true
+## Elasticsearch配置
+#es:
+#  address: 127.0.0.1:9200
+#  maxRetryTimeoutMillis: 300000
+#  connectTimeout: 5000
+#  socketTimeout: 60000
+
