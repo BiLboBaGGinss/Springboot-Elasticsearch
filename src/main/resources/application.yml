@@ -1,40 +1,47 @@
-# ÏîÄ¿ĞÅÏ¢
+# é¡¹ç›®ä¿¡æ¯
 project:
-  # ÏîÄ¿Ãû³Æ
+  # é¡¹ç›®åç§°
   name: Springboot-Elasticsearch
-  # ×÷Õß
+  # ä½œè€…
   author: BiLbo BaGGins
   year: 2020
-# ·şÎñÆ÷ÅäÖÃ
+# æœåŠ¡å™¨é…ç½®
 server:
   port: 80
   servlet:
-    # Ó¦ÓÃµÄ·ÃÎÊÂ·¾¶
+    # åº”ç”¨çš„è®¿é—®è·¯å¾„
     context-path: /
     tomcat:
-      # tomcatµÄURI±àÂë
+      # tomcatçš„URIç¼–ç 
       uri-encoding: UTF-8
-      # tomcat×î´óÏß³ÌÊı£¬Ä¬ÈÏÎª200
+      # tomcatæœ€å¤§çº¿ç¨‹æ•°ï¼Œé»˜è®¤ä¸º200
       max-threads: 2000
-      # TomcatÆô¶¯³õÊ¼»¯µÄÏß³ÌÊı£¬Ä¬ÈÏÖµ25
+      # Tomcatå¯åŠ¨åˆå§‹åŒ–çš„çº¿ç¨‹æ•°ï¼Œé»˜è®¤å€¼25
       min-spare-threads: 100
-# SpringÅäÖÃ
+# Springé…ç½®
 spring:
-  # Ä£°åÒıÇæ
+  # æ¨¡æ¿å¼•æ“
   thymeleaf:
     mode: HTML
     encoding: utf-8
-    # ½ûÓÃ»º´æ
+    # ç¦ç”¨ç¼“å­˜
     cache: false
-  # ·şÎñÄ£¿é
+  # æœåŠ¡æ¨¡å—
   devtools:
     restart:
-      # ÈÈ²¿Êğ¿ª¹Ø
+      # çƒ­éƒ¨ç½²å¼€å…³
       enabled: true
-## ElasticsearchÅäÖÃ
-#es:
-#  address: 127.0.0.1:9200
-#  maxRetryTimeoutMillis: 300000
-#  connectTimeout: 5000
-#  socketTimeout: 60000
-
+# Elasticsearché…ç½®
+es:
+  # åè®®
+  schema: http
+  address: 127.0.0.1:9200
+  # è¿æ¥è¶…æ—¶æ—¶é—´
+  connectTimeOut: 1000
+  socketTimeOut: 30000
+  #è·å–è¿æ¥çš„è¶…æ—¶æ—¶é—´
+  connectionRequestTimeOut: 500
+  # æœ€å¤§è¿æ¥æ•°
+  maxConnectNum: 100
+  # æœ€å¤§è·¯ç”±è¿æ¥æ•°
+  maxConnectPerRoute: 100
