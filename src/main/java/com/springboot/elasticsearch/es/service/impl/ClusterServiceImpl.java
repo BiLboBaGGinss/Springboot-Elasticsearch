@@ -24,14 +24,16 @@ public class ClusterServiceImpl implements ClusterService {
 
     @Override
     public JSONObject clusterHealth() {
+        JSONObject res = new JSONObject();
         ClusterHealthRequest request = new ClusterHealthRequest();
         ClusterHealthResponse response = null;
         try {
             response = client.cluster().health(request, RequestOptions.DEFAULT);
         } catch (IOException e) {
             e.printStackTrace();
+            res.put("Exception" , e);
         }
-        JSONObject res = JSONObject.parseObject(response.toString());
+        res = JSONObject.parseObject(response.toString());
         return res;
     }
 }
